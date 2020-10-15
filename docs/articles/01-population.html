@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">iviRA</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
       </span>
     </div>
 
@@ -108,10 +108,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="https://innovationandvalueinitiative.shinyapps.io/ivi-ra-expert/">IVI-RA Model Interface</a>
+      <a href="https://ivi-ra-expert.clarityviz.com/">IVI-RA Model Interface</a>
     </li>
     <li>
-      <a href="https://innovationandvalueinitiative.shinyapps.io/ivi-ra/">IVI-RA Value Tool</a>
+      <a href="https://ivi-ra.clarityviz.com/">IVI-RA Value Tool</a>
     </li>
   </ul>
 </li>
@@ -155,31 +155,31 @@
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n.pats &lt;-<span class="st"> </span><span class="dv">100</span>
 pop &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sample_pop.html">sample_pop</a></span>(<span class="dt">n =</span> n.pats, <span class="dt">type =</span> <span class="st">"heterog"</span>)
 <span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(pop)</code></pre></div>
-<pre><code>##           age male weight prev_dmards    das28     sdai     cdai      haq0
-## [1,] 49.84687    0     75           3 5.278941 35.30405 30.88360 1.4434283
-## [2,] 63.93068    0     75           3 7.879359 64.69121 63.10818 1.3403692
-## [3,] 54.31851    0     75           3 4.351003 32.23475 27.36186 1.0101867
-## [4,] 61.55152    0     75           3 5.491656 41.14569 32.46161 0.2523587
-## [5,] 46.81421    0     75           3 5.586092 49.22267 43.54197 2.0331631
-## [6,] 52.44612    1     89           6 5.155279 26.15368 23.36092 0.6068555</code></pre>
+<pre><code>##           age male weight prev_dmards    das28     sdai     cdai     haq0
+## [1,] 61.02684    0     75           5 5.465976 30.63675 32.07972 1.137859
+## [2,] 71.25579    0     75           3 6.921399 37.03210 39.03053 2.460240
+## [3,] 60.06325    0     75           0 5.971370 34.08397 38.93296 1.798122
+## [4,] 60.66096    0     75           3 4.890702 28.21718 21.57930 0.429847
+## [5,] 61.06985    0     75           5 6.708158 33.11212 31.02810 2.499273
+## [6,] 68.53777    0     75           4 8.256732 67.44800 64.12642 1.542698</code></pre>
 <p>We can also customize the distribution of patients. For example, suppose we want to study a younger and healthier population. We might then sample patients by customizing arguments in <code>sample_pats</code>,</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pop2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sample_pop.html">sample_pop</a></span>(<span class="dt">n =</span> n.pats, <span class="dt">type =</span> <span class="st">"heterog"</span>, <span class="dt">age_mean =</span> <span class="dv">45</span>, <span class="dt">das28_mean =</span> <span class="dv">4</span>, <span class="dt">sdai_mean =</span> <span class="dv">20</span>, 
                     <span class="dt">cdai_mean =</span> <span class="dv">18</span>)
 <span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(pop2)</code></pre></div>
-<pre><code>##           age male weight prev_dmards    das28     sdai      cdai
-## [1,] 35.80678    0     75           4 3.147109 10.45602  5.330694
-## [2,] 50.84882    1     89           4 4.917489 35.44312 28.536867
-## [3,] 45.62702    1     89           4 4.923688 31.30804 31.798102
-## [4,] 50.55279    1     89           0 3.092341 14.46860 11.001725
-## [5,] 33.50284    0     75           4 4.017811 24.24751 18.708423
-## [6,] 34.39638    0     75           3 4.558657 16.26253 13.870842
+<pre><code>##           age male weight prev_dmards    das28       sdai      cdai
+## [1,] 50.54048    0     75           2 2.704023  0.9849625  1.083538
+## [2,] 46.99155    0     75           3 6.276414 38.4812648 30.910145
+## [3,] 44.50258    0     75           3 3.697388 17.4936214 13.618280
+## [4,] 50.85143    1     89           5 3.864608 20.9667852 15.313670
+## [5,] 47.42490    1     89           4 3.525874 21.9051298 14.924474
+## [6,] 63.97364    1     89           4 4.453902 33.5057183 31.561699
 ##           haq0
-## [1,] 1.4348361
-## [2,] 1.9746129
-## [3,] 1.8481884
-## [4,] 0.4218599
-## [5,] 1.3028964
-## [6,] 1.0850781</code></pre>
+## [1,] 2.5652117
+## [2,] 1.7446993
+## [3,] 1.5785482
+## [4,] 0.9925878
+## [5,] 1.9190828
+## [6,] 1.2074917</code></pre>
 </div>
 <div id="using-your-own-patient-population" class="section level2">
 <h2 class="hasAnchor">
